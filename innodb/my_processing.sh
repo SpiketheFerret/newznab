@@ -63,7 +63,7 @@ fi
 CURRTIME=`date +%s`
 #every 2 hours and during first loop
 DIFF=$(($CURRTIME-$LASTOPTIMIZE2))
-if [ "$DIFF" -gt 3600 ] || [ "$DIFF" -lt 1 ]
+if [ "$DIFF" -gt 7200 ] || [ "$DIFF" -lt 1 ]
 then
         LASTOPTIMIZE2=`date +%s`
         cd $TESTING
