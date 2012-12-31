@@ -65,14 +65,12 @@ export MYSQL_CMD="UPDATE groups set backfill_target=backfill_target+1 where acti
 [ ! -f $NEWZNAB_PATH/update_theaters.php ] && echo $NEWZNAB_PATH/update_theaters.php not found && exit
 
 
-# sleep's are so the update_releases can get a running start before getting slammed
-
-$TMUX new-session -d -s NewzNab -n NewzNab 'cd $NEWZNAB_PATH && echo "processNfos Working......" && sleep 30 && $PHP $NEWZNAB_PATH/postprocess_nfo.php'
+$TMUX new-session -d -s NewzNab -n NewzNab 'cd $NEWZNAB_PATH && echo "processNfos Working......" && $PHP $NEWZNAB_PATH/postprocess_nfo.php'
 $TMUX selectp -t 0
-$TMUX splitw -v -p 75 'echo "imports Working......" && sleep 45 && ./my_import.sh'
+$TMUX splitw -v -p 75 'echo "imports Working......" && ./my_import.sh'
 $TMUX selectp -t 0
-$TMUX splitw -h -p 66 'cd $NEWZNAB_PATH && echo "processAdditional Working......" && sleep 35 && $PHP $NEWZNAB_PATH/justpostprocessing.php'
-$TMUX splitw -h -p 50 'cd $NEWZNAB_PATH && echo "postProcessing Working......" && sleep 40 && $PHP $NEWZNAB_PATH/postprocessing.php'
+$TMUX splitw -h -p 66 'cd $NEWZNAB_PATH && echo "processAdditional Working......" && $PHP $NEWZNAB_PATH/justpostprocessing.php'
+$TMUX splitw -h -p 50 'cd $NEWZNAB_PATH && echo "postProcessing Working......" && $PHP $NEWZNAB_PATH/postprocessing.php'
 $TMUX selectp -t 3
 $TMUX splitw -h -p 50 'echo "create Releases Working......" && ./my_processing.sh'
 
