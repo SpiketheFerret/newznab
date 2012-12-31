@@ -1,3 +1,7 @@
+# OLD SCRIPTS - USE CURRENT
+
+https://github.com/jonnyboy/newznab-tmux.git
+
 ## Newznab all in one Scripts - Threaded
 
 There are 2 sets of scripts. If, you have or want InnoDB tables, then you should use the scripts in the innodb folder. Otherwise, use the scripts in the myisam folder.
