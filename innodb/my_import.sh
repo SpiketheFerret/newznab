@@ -60,6 +60,7 @@ while :
     cd $NEWZNAB_PATH
     [ -f $NEWZNAB_PATH/backfill_threaded.php ] && $PHP $NEWZNAB_PATH/backfill_threaded.php &
 
+    echo "waiting for backfill to finish..."
     wait
 
     #increment backfill days
