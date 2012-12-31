@@ -11,3 +11,5 @@ The scripts in the old folder are kept for my reference.
 The scripts in the myisam folder were created by request, I do not know if the will bloat your database. Let me know your results.
 
 ~jonnyboy
+
+<a href='http://www.pledgie.com/campaigns/18980'><img alt='Click here to lend your support to: Newznab-tmux and make a donation at www.pledgie.com !' src='http://www.pledgie.com/campaigns/18980.png?skin_name=chrome' border='0' /></a>
