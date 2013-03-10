@@ -1,6 +1,6 @@
-# OLD SCRIPTS - USE CURRENT
+# DEPRECATED SCRIPTS - USE CURRENT
 
-https://github.com/jonnyboy/newznab-tmux.git
+[newznab-tmux](https://github.com/jonnyboy/newznab-tmux)
 
 ## Newznab all in one Scripts - Threaded
 
